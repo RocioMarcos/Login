@@ -7,6 +7,7 @@ from django.contrib.auth import login, logout
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from .forms import *
 
 # Create your views here.
 
@@ -20,7 +21,7 @@ class home(LoginRequiredMixin,TemplateView):
 class LoginFormView(FormView):
     template_name='login.html'
     success_url=reverse_lazy('home')
-    form_class=AuthenticationForm
+    form_class=LoginForm
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
