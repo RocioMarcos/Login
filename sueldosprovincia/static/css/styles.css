@@ -1,0 +1,138 @@
+body {
+    background: #eee !important;	
+}
+
+.login-form{
+    margin:4% auto 0;
+    max-width: inherit;
+}
+
+.login-form h1{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-style: oblique;
+}
+
+.login-form h2{
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    font:  bold 30px Georgia, serif;
+    color:#3498db;
+}
+h3{ font:  bold 20px Georgia, serif;
+    color:#e74c3c;}
+
+.form-header,.form-footer{
+    background-color: rgba(255, 255, 255, .8);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.form-signin{
+    padding: 45px 35px 45px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);  
+    border-bottom: 0px; 
+    border-top: 0px;  
+}
+
+.form-register{
+    padding: 45px 35px 45px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);  
+    border-bottom: 0px; 
+    border-top: 0px; 
+}
+
+.form-header{
+    text-align: center;
+    padding: 15px 40px ;
+    border-radius: 10px 10px 0 0;
+
+}
+.form-header i{font-size:60px;}
+.form-footer {
+    padding: 15px 40px;	
+}
+.form-signin-heading{
+    margin-bottom: 30px;
+}
+.bt-login{
+    background-color: #3498db;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: background-color 300ms linear 0s;
+}
+.form-signin .form-control, .form-register .form-control{
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.35vh;
+}
+.form-signin .form-control:focus, .form-register .form-control:focus {
+    z-index: 2;
+}
+.form-register input{
+    border: 1px solid #ddd;
+    border-radius: 0;
+    color: #333;
+    height: 43px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+i{margin-right: 4%;}
+a{text-decoration: none;color:#333;}
+
+.has-error{color:#ff0000 !important;}
+.has-success{color:#78b310 !important;}
+.has-error input{border:1px solid red !important;}
+.has-success input{border:1px solid #78b310 !important;}
+
+.message_success{background-color: #78b310; color:#fff;padding: 5px;}
+.message_error{background-color: #e74c3c; color:#fff;padding: 5px;}
+h1{font-family: Pacifico;}
+@media screen {
+    .logo-economia{
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .container {
+        min-width: 90% !important;
+    }
+    .login-form{
+        min-width: 95% !important;
+    }
+    .logo-economia{
+        width: 200px;
+        height: 200px;
+    }
+    .titulo-recibos{
+        font-size: 3rem !important;
+    }
+    .input-group{
+        height: 5rem !important;
+    }
+    .form-control{
+        font-size: 1.75rem !important;
+    }
+    .btn-block {
+        height: 5rem;
+        margin-top: 2.1rem !important;
+        font-size: 1.85rem;
+    }
+    .btn-aux{
+        font-size: 1.85rem;
+    }
+    .icon {
+        font-size: 1.65rem;
+    }
+}

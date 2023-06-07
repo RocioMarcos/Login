@@ -1,7 +1,9 @@
-{% load static %}
 {%extends "base.html"%}
+{% load static %}
 
 {%block head%}
+{{block.super}}
+<link rel="stylesheet" href="{% static "css/styles.css"%}">
 {%endblock%}
 
 {%block tittle%}
@@ -13,20 +15,40 @@
     <div class="login-form">
         <div class="form-header" >
             <a title="Ministerio de Economia" href="http://meconse.gob.ar/">
-                <div align="center">
-                    <img src="#" alt="Ministerio de Economia" class="img-responsive"/></div></a>          
+                <img src="{% static "images/escudoeco.png" %}" alt="Ministerio de Economia" class="img-responsive"/>
+            </a>          
             <h2> RECIBOS DIGITALES</h2>
         </div>
-    </div>
-</div>
         <form method="post" action="{% url 'login' %}">
             {%csrf_token%}
             {% for x in form %}
-                {{x.label}}
-                {{x}}
+                <div class="form-group pt-3">		                                        
+                    <div class="col-md-12">                                                                   
+                        <div class="input-group">
+                            {{x.label_tag}}
+                            {{x}}
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-            <input type="submit" value="Iniciar">
+            <div class="form-group pt-4">
+                <div class="col-sm-offset-12 col-sm-12">  
+                    <button class="btn btn-block bt-login"  type="submit" value="Iniciar">Iniciar sesión</button> 
+                </div>
+            </div> 
         </form>
+        <div class="form-footer">
+            <div class="row d-flex flex-column">
+
+                <p>Si no es usuario, por favor <a href="register.php">registrarse aqu&iacute</a>.</p>
+                <p><a href="#">&iquest;Olvid&oacute; su contraseña?</a></p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+        
 {%endblock%}
 
 {%block script%}
