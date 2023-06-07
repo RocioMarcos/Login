@@ -1,10 +1,9 @@
 body {
     background: #eee !important;	
 }
-
 .login-form{
     margin:4% auto 0;
-    max-width: inherit;
+    max-width: 27.5rem;
 }
 
 .login-form h1{
@@ -97,10 +96,16 @@ a{text-decoration: none;color:#333;}
 .message_success{background-color: #78b310; color:#fff;padding: 5px;}
 .message_error{background-color: #e74c3c; color:#fff;padding: 5px;}
 h1{font-family: Pacifico;}
-@media screen {
+
+.inputs{
+    height: 3rem !important;
+    font-size: 1rem !important;
+}
+
+@media only screen and (min-width: 600px){
     .logo-economia{
-        width: 200px !important;
-        height: 200px !important;
+        width: 100px !important;
+        height: 100px !important;
     }
 }
 
