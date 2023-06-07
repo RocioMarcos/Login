@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+
+{%block head%}
+{%endblock%}
+
+{%block tittle%}
+{%endblock%}
+
+{%block body%}
+<input type="text">
+{%endblock%}
+
+{%block script%}
+{%endblock%}
