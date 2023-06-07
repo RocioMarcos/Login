@@ -10,13 +10,7 @@ from django.contrib import messages
 
 # Create your views here.
 
-class index(TemplateView):
-    template_name='index.html'
 
-    def dispatch(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return redirect('home')
-        return super().dispatch(request, *args, **kwargs)
 
 class home(LoginRequiredMixin,TemplateView):
     template_name='home.html'
