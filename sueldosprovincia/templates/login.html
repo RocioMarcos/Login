@@ -1,3 +1,4 @@
+{% load static %}
 {%extends "base.html"%}
 
 {%block head%}
@@ -7,11 +8,25 @@
 {%endblock%}
 
 {%block body%}
-<form method="post" action="{% url 'login' %}">
-    {%csrf_token%}
-    {{form}}
-    <input type="submit" value="Iniciar">
-</form>
+
+<div class="container">
+    <div class="login-form">
+        <div class="form-header" >
+            <a title="Ministerio de Economia" href="http://meconse.gob.ar/">
+                <div align="center">
+                    <img src="#" alt="Ministerio de Economia" class="img-responsive"/></div></a>          
+            <h2> RECIBOS DIGITALES</h2>
+        </div>
+    </div>
+</div>
+        <form method="post" action="{% url 'login' %}">
+            {%csrf_token%}
+            {% for x in form %}
+                {{x.label}}
+                {{x}}
+            {% endfor %}
+            <input type="submit" value="Iniciar">
+        </form>
 {%endblock%}
 
 {%block script%}
